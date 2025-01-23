@@ -3,13 +3,13 @@
 ## Aplicación de gestión de turnos/citas 📑
 
 ## Tabla de contenidos
-- [Introducción](#Introducción)
-- [Requisitos del proyecto ](#Requisitos )
-- [Diagrama de clases](#Diagrama )
-- [Especificaciones del sistema](#Especificaciones )
-- [Supuestos ❓](#Supuestos  )
-- [Configuraciones ⚙️](#Configuraciones-⚙️)
-- [Autor 👨‍💻](#Autor )
+- [Introducción](#introducción)
+- [Requisitos del proyecto ✅](#requisitos-del-proyecto-✅)
+- [Diagrama de clases](#diagrama-de-clases)
+- [Especificaciones del sistema 💻](#especificaciones-del-sistema-💻)
+- [Supuestos ❓](#supuestos-❓)
+- [Configuraciones ⚙️](#configuraciones-⚙️)
+- [Autor 👨‍💻](#autor-👨‍💻)
 
 ### Introducción
 
