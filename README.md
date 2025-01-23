@@ -8,7 +8,7 @@
 - [Diagrama de clases](#Diagrama )
 - [Especificaciones del sistema](#Especificaciones )
 - [Supuestos ❓](#Supuestos  )
-- [Configuraciones ](#Configuraciones)
+- [Configuraciones ](#Configuraciones-⚙️)
 - [Autor 👨‍💻](#Autor )
 
 ### Introducción
