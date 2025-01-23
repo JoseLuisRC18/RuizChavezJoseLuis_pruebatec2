@@ -4,8 +4,9 @@
 
 ## Tabla de contenidos
 - [Introducción](#Introducción)
-- [Requisitos del proyecto ](#Requisitosdelproyecto )
+- [Requisitos del proyecto ](#Requisitos )
 - [Diagrama de clases](#Diagramadeclases )
+- [ Especificaciones del sistema](#Diagramadeclases )
 - [Supuestos ❓](#Supuestos  )
 - [Configuraciones ](#Configuraciones  )
 - [Autor 👨‍💻](#Autor )
