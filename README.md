@@ -4,12 +4,12 @@
 
 ## Tabla de contenidos
 - [Introducción](#introducción)
-- [Requisitos del proyecto ✅](#requisitos-del-proyecto-✅)
+- [Requisitos del proyecto ](#requisitos-del-proyecto)
 - [Diagrama de clases](#diagrama-de-clases)
-- [Especificaciones del sistema 💻](#especificaciones-del-sistema-💻)
-- [Supuestos ❓](#supuestos-❓)
-- [Configuraciones ⚙️](#configuraciones-⚙️)
-- [Autor 👨‍💻](#autor-👨‍💻)
+- [Especificaciones del sistema ](#especificaciones-del-sistema)
+- [Supuestos ](#supuestos)
+- [Configuraciones ](#configuraciones)
+- [Autor ](#autor)
 
 ### Introducción
 
@@ -22,7 +22,8 @@
         - filtra turnos
         
 
-### Requisitos del proyecto  ✅
+### Requisitos del proyecto  
+##✅
 
 - Java + Servlets
 - JSP (frontend)
@@ -34,7 +35,8 @@
 
 ![Turnero.drawio.png](Turnero.drawio.png)
 
-### Especificaciones del sistema  💻
+### Especificaciones del sistema  
+##💻
 
 - especificaciones
     - Java 17
@@ -42,11 +44,13 @@
     - Netbeans 17
     - Apache tomcat   →  version ( [9.0.98](https://tomcat.apache.org/download-90.cgi#9.0.98) )
 
-### Supuestos ❓
+### Supuestos 
+##❓
 
 la parte de las id no las pido , igual en los constructores no incluyo id 
 
-### Configuraciones  **⚙️**
+### Configuraciones 
+##  **⚙️**
 
 - Usuarios y contraseñas
     - Apache tomcat
@@ -69,8 +73,8 @@ la parte de las id no las pido , igual en los constructores no incluyo id
     - hacer la conexión de la base de datos
     - se recmienda hacer un clean and build para evitar posibles errores
 
-### Autor 👨‍💻
-
+### Autor 
+##👨‍💻
 ***José Luis Ruiz Chavez***   
 
 *JVB01SM*
