@@ -1,0 +1,42 @@
+
+package com.hackaboss.persistencia;
+
+import com.hackaboss.logica.Ciudadano;
+import com.hackaboss.persistencia.exceptions.NonexistentEntityException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+public class ControladoraPersistencia {
+    
+    CiudadanoJpaController ciudadaJpa = new CiudadanoJpaController();
+    public void crearCiudadano(Ciudadano ciudada) {
+       // se llama al jpa controler
+       ciudadaJpa.create(ciudada);
+    }
+
+    public List<Ciudadano> traerCiudadanos() {
+        
+       return (List<Ciudadano>) ciudadaJpa.findCiudadanoEntities();
+        
+    }
+    //borrado fisico
+    public void eliminarCiudadano(Long id) {
+        try {
+            ciudadaJpa.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public Ciudadano traerCiudadano(Long id) {
+        return ciudadaJpa.findCiudadano(id);
+    }
+
+    
+
+    
+    
+}
