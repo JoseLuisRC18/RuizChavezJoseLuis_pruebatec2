@@ -12,19 +12,19 @@
     <body>
        <div class="container mt-4">
         <h1>Formulario Ciudadanos </h1>
-        <form action="SvCiudadano" method="POST">
-            <%Ciudadano ciudada = (Ciudadano)request.getSession().getAttribute("editarCiudadano"); %>
+        <form action="SvEditarCiudadano" method="POST">
+            <%Ciudadano ciudada = (Ciudadano)request.getSession().getAttribute("ciudadanoEditar"); %>
         <div class="form-group">
             <label for="nombre">Nombre :</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" value="<%=ciudada.getNombre() %>">
+            <input type="text" class="form-control" id="nombre" name="nombre" value="<%=ciudada.getNombre()%>">
         </div>
         <div class="form-group">
             <label for="apellido">Apellido:</label>
-            <input type="text" class="form-control" id="apellido" name="apellido" value="<%=ciudada.getApellido()%>"  >
+            <input type="text" class="form-control" id="apellido" name="apellido"value="<%=ciudada.getApellido()%>">
         </div>
         <div class="form-group">
             <label for="telefono">CURP:</label>
-            <input type="text" class="form-control" id="curp" name="curp" value="<%=ciudada.getCurp()%>">
+            <input type="text" class="form-control" id="curp" name="curp"value="<%=ciudada.getCurp()%>">
         </div>
         <button type="submit" class="btn btn-primary">Modificar</button>
         </form>

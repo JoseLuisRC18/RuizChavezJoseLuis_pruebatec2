@@ -35,6 +35,15 @@ public class ControladoraLogica {
          return controlPersis.traerCiudadano(id);
     }
 
+    public void editarCiudadano(Ciudadano ciudada) {
+        controlPersis.editarCiudadano(ciudada);
+    }
+
+    public boolean validarAcceso(String email, String password) {
+       Usuario usu = controlPersis.buscarUsuario(email);
+       return false;
+    }
+
     
 
     

@@ -16,8 +16,9 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet(name = "SvEditarCiudadano", urlPatterns = {"/SvEditarCiudadano"})
 public class SvEditarCiudadano extends HttpServlet {
-
     ControladoraLogica control = new ControladoraLogica();
+
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
@@ -28,11 +29,11 @@ public class SvEditarCiudadano extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
          Long id = Long.parseLong(request.getParameter("id"));
-         Ciudadano  ciudadano = control.buscarCiudadano(id);
+         Ciudadano  ciudada = control.buscarCiudadano(id);
        
        
         HttpSession miSesion = request.getSession();
-        miSesion.setAttribute("listaCiudadanos", ciudadano);
+        miSesion.setAttribute("ciudadanoEditar", ciudada);
           response.sendRedirect("editarCiudadano.jsp");
         
     }
@@ -40,7 +41,20 @@ public class SvEditarCiudadano extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellido");
+        String curp = request.getParameter("curp");
+        
+        Ciudadano ciudada = (Ciudadano)request.getSession().getAttribute("ciudadanoEditar");
+        ciudada.setNombre(nombre);
+        ciudada.setApellido(apellido);
+        ciudada.setCurp(curp);
+        
+       control.editarCiudadano(ciudada);
+       List <Ciudadano>listaCiudadanos = control.buscarPorCurp(curp);
+        HttpSession miSesion = request.getSession();
+        miSesion.setAttribute("listaCiudadanos", listaCiudadanos);
+       response.sendRedirect("index.jsp");
     }
 
     

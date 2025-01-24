@@ -71,10 +71,10 @@
                                                               <i class="fas fa-trash-alt"></i>Eliminar</button>
                                           <input type="hidden" name="id" value="<%=ciudada.getId()%>"> 
                                                 </form>
-                                      <form name="editar" action="SvEditarCiudadano" method="GET"> 
+                                                <form name="editar" action="SvEditarCiudadano" method="GET"> 
                                                             <button type="submit" class="btn btn-primary btn-user btn-block"; style="margin-left: 5px;"> 
                                                               <i class="fas fa-pencil-alt"></i>Editar  </button>
-                                                            <input type="hidden" name="id_persona" value="<%=ciudada.getId()%>"> 
+                                                            <input type="hidden" name="id" value="<%=ciudada.getId()%>"> 
                                                 </form> 
                                                
                             </td>
@@ -87,16 +87,7 @@
             </table>
             
         </div>
-            <!--eliminacion  -->  
-             <h1 class="mt-4">Eliminación</h1>
-             <form action="SvEliminarCiudadano" method="POST">
-         <div class="form-group">
-                <label for="id">Ingrese la id a eliminar:</label>
-                <input type="text" class="form-control" id="id" name="id">
-            </div>
-            <button type="submit" class="btn btn-primary">Eliminar</button>
-         
-        </form>
+            
                 
        
         
