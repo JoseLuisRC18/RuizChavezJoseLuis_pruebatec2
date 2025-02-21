@@ -12,18 +12,17 @@ public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUsuario;
-    private String correo;
-    private String contraseña;
+    private String email;
+    private String  password;
 
     public Usuario() {
     }
 
-    public Usuario(String correo, String contraseña) {
-        this.correo = correo;
-        this.contraseña = contraseña;
+    public Usuario(Long idUsuario, String email, String password) {
+        this.idUsuario = idUsuario;
+        this.email = email;
+        this.password = password;
     }
-
-    
 
     public Long getIdUsuario() {
         return idUsuario;
@@ -33,26 +32,27 @@ public class Usuario implements Serializable {
         this.idUsuario = idUsuario;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getPassword() {
+        return password;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
-        return "Usuario{" + "idUsuario=" + idUsuario + ", correo=" + correo + ", contrase\u00f1a=" + contraseña + '}';
+        return "Usuario{" + "idUsuario=" + idUsuario + ", email=" + email + ", password=" + password + '}';
     }
+
     
     
     

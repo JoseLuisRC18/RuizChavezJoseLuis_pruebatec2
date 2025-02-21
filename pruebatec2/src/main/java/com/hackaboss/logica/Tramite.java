@@ -1,22 +1,25 @@
 
 package com.hackaboss.logica;
 
+import java.util.List;
+import javax.persistence.OneToMany;
+
 
 public class Tramite {
     
     private Long idTramite;
     private String nombreTramite;
     private String descripcionTramite;
-
+    
+  
     public Tramite() {
     }
 
-    public Tramite(String nombreTramite, String descripcionTramite) {
+    public Tramite(Long idTramite, String nombreTramite, String descripcionTramite) {
+        this.idTramite = idTramite;
         this.nombreTramite = nombreTramite;
         this.descripcionTramite = descripcionTramite;
     }
-
-    
 
     public Long getIdTramite() {
         return idTramite;
@@ -42,10 +45,9 @@ public class Tramite {
         this.descripcionTramite = descripcionTramite;
     }
 
-    @Override
-    public String toString() {
-        return "Tramite{" + "idTramite=" + idTramite + ", nombreTramite=" + nombreTramite + ", descripcionTramite=" + descripcionTramite + '}';
-    }
+    
+    
+
     
     
     

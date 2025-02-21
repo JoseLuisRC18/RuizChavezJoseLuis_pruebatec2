@@ -26,6 +26,18 @@
             <label for="telefono">CURP:</label>
             <input type="text" class="form-control" id="curp" name="curp"value="<%=ciudada.getCurp()%>">
         </div>
+        <div class="form-group">
+            <label for="telefono">Tramite</label>
+            <input type="text" class="form-control" id="curp" name="tramite">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Fecha:</label>
+            <input type="text" class="form-control" id="curp" name="fecha">
+        </div>
+          <div class="form-group">
+            <label for="telefono">Estado</label>
+            <input type="text" class="form-control" id="curp" name="estado">
+        </div>
         <button type="submit" class="btn btn-primary">Modificar</button>
         </form>
          </div>

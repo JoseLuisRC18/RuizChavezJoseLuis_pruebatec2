@@ -2,10 +2,12 @@
 package com.hackaboss.logica;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Ciudadano implements Serializable {
@@ -24,6 +26,8 @@ public class Ciudadano implements Serializable {
         this.apellido = apellido;
         this.curp = curp;
     }
+
+   
 
     public Long getId() {
         return id;
@@ -61,6 +65,8 @@ public class Ciudadano implements Serializable {
     public String toString() {
         return "Ciudadano{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", curp=" + curp + '}';
     }
+    
+    
 
     
 

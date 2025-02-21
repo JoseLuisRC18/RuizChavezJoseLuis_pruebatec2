@@ -2,6 +2,7 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.hackaboss.logica.Ciudadano"%>
+<%@page import="com.hackaboss.logica.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,8 +13,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
+        <%
+            String usu = (String)request.getSession().getAttribute("email");
+            if(usu != null){
+        %>
+        
         <div class="container mt-4">
-        <h1>Formulario Ciudadanos </h1>
+        <h1>Formulario Turnos tramites </h1>
         <form action="SvCiudadano" method="POST">
         <div class="form-group">
             <label for="nombre">Nombre :</label>
@@ -26,6 +32,18 @@
         <div class="form-group">
             <label for="telefono">CURP:</label>
             <input type="text" class="form-control" id="curp" name="curp">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Tramite</label>
+            <input type="text" class="form-control" id="curp" name="tramite">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Fecha:</label>
+            <input type="text" class="form-control" id="curp" name="fecha">
+        </div>
+          <div class="form-group">
+            <label for="telefono">Estado</label>
+            <input type="text" class="form-control" id="curp" name="estado">
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
@@ -50,6 +68,9 @@
                          <th>Nombre</th>
                          <th>Apellido</th>
                          <th>CURP</th>
+                         <th>Tramite</th>
+                         <th>Fecha</th>
+                         <th>Estado</th>                         
                          <th>Acción</th>
                      </tr>    
                  </thead>
@@ -96,3 +117,9 @@
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </body>
 </html>
+<% }
+else{
+response.sendRedirect("login.jsp");
+}
+ 
+%>

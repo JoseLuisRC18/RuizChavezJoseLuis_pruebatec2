@@ -14,6 +14,7 @@ public class ControladoraPersistencia {
     
     CiudadanoJpaController ciudadaJpa = new CiudadanoJpaController();
     UsuarioJpaController usuJpa = new UsuarioJpaController();
+    
     public void crearCiudadano(Ciudadano ciudada) {
        // se llama al jpa controler
        ciudadaJpa.create(ciudada);
@@ -46,7 +47,7 @@ public class ControladoraPersistencia {
     }
 
     public Usuario buscarUsuario(String email) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return usuJpa.findUserByCorreo(email);
     }
 
     

@@ -1,6 +1,8 @@
 
 package com.hackaboss.logica;
 
+
+
 import com.hackaboss.persistencia.ControladoraPersistencia;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +12,7 @@ public class ControladoraLogica {
     
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
 
-    public void crearCiudadano(String nombre, String apellido, String curp) {
+   public void crearCiudadano(String nombre, String apellido, String curp) {
         Ciudadano ciudada = new Ciudadano( nombre, apellido, curp);
         controlPersis.crearCiudadano(ciudada);
     }
@@ -39,10 +41,17 @@ public class ControladoraLogica {
         controlPersis.editarCiudadano(ciudada);
     }
 
-    public boolean validarAcceso(String email, String password) {
+     public boolean validarAcceso(String email, String password) {
        Usuario usu = controlPersis.buscarUsuario(email);
+       if(usu!=null) {
+       if (usu.getEmail().equals(email)){
+           if(usu.getPassword().equals(password)){
+               return true;
+           }
+       }
+       }
        return false;
-    }
+     }
 
     
 
