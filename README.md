@@ -64,7 +64,11 @@ la parte de las id no las pido , igual en los constructores no incluyo id
     - Sistema tunero
         - correo:luis@gmail.com
         - contraseña:12345
+     
+          
     ![datos.png](datos.png)
+
+
 - Ejecución del sistema
     - Descargar el sistema y contar con las especificaciones anteriormente mencionadas
     - Crear una base de datos con el nombre: turnero y con este formato
